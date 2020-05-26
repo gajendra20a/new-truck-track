@@ -1,0 +1,20 @@
+.truck-top-component {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-gap: 2px;
+}
+
+.truck-status{
+  background-color:#f0f0f0;  
+  padding: 10px;
+}
+
+.truck-status-name, .truck-status-count {
+  text-align: center;
+}
+
+.truck-status-count{
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}

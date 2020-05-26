@@ -1,1 +1,2 @@
-<div>{{title}}</div>
+<app-topnav [totalTrucks]="totalTrucks" (selectedTruckType)="selectedTruckType($event)"></app-topnav>
+<app-sidelist class='truck-component' [totalTrucks]="totalTrucks"></app-sidelist>

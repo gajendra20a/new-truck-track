@@ -1,1 +1,12 @@
-<p>sidelist works!</p>
+<div class='truck-side-list'>
+  <input 
+    [formControl]='input' 
+    (keyup)='inputChanged()' 
+    placeholder="Search Truck"
+    type="text"/>
+  <div class="truck-list">
+    <div class="truck-item" *ngFor="let item of truckList">
+      <div class="truck-number">{{item.truckNumber}}</div>
+    </div>
+  </div>
+</div>

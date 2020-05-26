@@ -1,1 +1,22 @@
-<p>topnav works!</p>
+<div class="truck-top-component">
+  <div class="truck-status" (click)="displayAllTrucks()">
+    <div class="truck-status-name">Total</div>
+    <div class="truck-status-count">{{this.allTrucks}}</div>
+  </div>
+  <div class="truck-status" (click)="displayRunningTrucks()">
+    <div class="truck-status-name">Running</div>
+    <div class="truck-status-count">{{this.runningTrucks}}</div>
+  </div>
+  <div class="truck-status" (click)="displayStoppedTrucks()">
+    <div class="truck-status-name">Stopped</div>
+    <div class="truck-status-count">{{this.stoppedTrucks}}</div>
+  </div>
+  <div class="truck-status" (click)="displayIdleTrucks()">
+    <div class="truck-status-name">Idle</div>
+    <div class="truck-status-count">{{this.idleTrucks}}</div>
+  </div>
+  <div class="truck-status">
+    <div class="truck-status-name"> Error</div>
+  </div>
+</div>
+

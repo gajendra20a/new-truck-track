@@ -26,8 +26,8 @@ export class LiveDataService {
   }
 
   public getTruckData(truck: Datum): string {
-    const truckRunning = truck.lastRunningState.truckRunningState;
-    const isIgnitionOn = truck.lastWaypoint.ignitionOn;
+    const truckRunning = truck && truck.lastRunningState && truck.lastRunningState.truckRunningState;
+    const isIgnitionOn = truck && truck.lastWaypoint && truck.lastWaypoint.ignitionOn;
 
     if (truckRunning){
       return truckStatus.running;

@@ -1,0 +1,23 @@
+.truck-side-list{
+  width: 15%;
+}
+
+.truck-side-list input{
+  width: 100%;
+  height: 40px;
+}
+
+.truck-list{
+  height: 86vh;
+  width: 104%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.truck-item{
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 2px 0;
+  padding: 25px 10px;
+  width: 100%;
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Datum } from './../models/interfaceAPI';
-import { LiveDataService } from './../services/livedata.service';
+import { LiveDataService, truckStatus } from './../services/livedata.service';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +14,27 @@ export class AppComponent {
 
   constructor(private livedataService: LiveDataService){}
 
-  ngOnInit(){
+  ngOnInit() {
     this.livedataService.truckData$.subscribe((data) => {
       this.totalTrucks = data.data;
       this.filteredTrucks = this.totalTrucks;
     });
+  }
+
+  public selectedTruckType(event){
+    let truckList: Datum[] = [];
+    let truckState: string;
+    if (event === truckStatus.total){
+      truckList = this.totalTrucks;
+    }
+    else {
+      this.totalTrucks.filter(truck => {
+        truckState = this.livedataService.getTruckData(truck);
+        if(event === truckState){
+          truckList = [...truckList, ...[truck]];
+        }
+      });
+    }
+    this.filteredTrucks = truckList;
   }
 }
