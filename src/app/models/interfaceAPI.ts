@@ -13,7 +13,7 @@ export interface LastWaypoint {
   truckId: number;
   speed: number;
   updateTime: any;
-  ignitionOn: boolean;
+  ignitionOn?: boolean;
   odometerReading: number;
   batteryPower: boolean;
   fuelLevel: number;
@@ -23,7 +23,7 @@ export interface LastWaypoint {
 export interface LastRunningState {
   truckId: number;
   stopStartTime: number;
-  truckRunningState: number;
+  truckRunningState?: number;
   lat: number;
   lng: number;
   stopNotficationSent: number;
@@ -70,8 +70,8 @@ export interface Datum {
   externalTruck: boolean;
   imeiNumber: string;
   simNumber: string;
-  lastWaypoint: LastWaypoint;
-  lastRunningState: LastRunningState;
+  lastWaypoint?: LastWaypoint;
+  lastRunningState?: LastRunningState;
   truckType: TruckType;
   truckSize: TruckSize;
   drivers: Driver[];
