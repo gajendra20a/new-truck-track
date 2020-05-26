@@ -1,7 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Datum } from './../../models/interfaceAPI';
 import {FormControl} from "@angular/forms";
-import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-sidelist',
