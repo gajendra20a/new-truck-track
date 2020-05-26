@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Datum } from './../../models/interfaceAPI';
-import {FormControl} from "@angular/forms";
+import { FormControl } from "@angular/forms";
 
 @Component({
   selector: 'app-sidelist',

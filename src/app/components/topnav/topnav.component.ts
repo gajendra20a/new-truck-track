@@ -8,7 +8,7 @@ import { LiveDataService, truckStatus } from './../../services/livedata.service'
   styleUrls: ['./topnav.component.css']
 })
 export class TopnavComponent {
-  @Input set totalTrucks(totalTrucks: Datum[]){
+  @Input() set totalTrucks(totalTrucks: Datum[]){
     this.totalTrucksFromInput = totalTrucks;
     this.setTruckCount();
   }
