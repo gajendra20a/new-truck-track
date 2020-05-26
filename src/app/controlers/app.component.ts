@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Datum } from './../models/interfaceAPI';
 import { LiveDataService, truckStatus } from './../services/livedata.service';
 
@@ -8,7 +8,7 @@ import { LiveDataService, truckStatus } from './../services/livedata.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'new-truck';
+  
   public totalTrucks: Datum[] = [];
   public filteredTrucks: Datum[] = [];
 
